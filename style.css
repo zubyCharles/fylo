@@ -186,3 +186,50 @@ header .header-container .nav-section a:active {
 .testimonial-section .testimonial-container .name {
   transform: translate(-5.2rem, -0.25rem);
 }
+
+.sign-up-section {
+  background: #585989;
+  color: #fff;
+  padding: 3rem 0;
+}
+.sign-up-section .sign-up-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+.sign-up-section .sign-up-container .sign-up-header {
+  width: fit-content;
+  margin: 0 auto;
+}
+.sign-up-section .sign-up-container .sign-up-header h2 {
+  font-size: 1.25rem;
+}
+.sign-up-section .sign-up-container .sign-up-text {
+  width: 85%;
+  margin: 1.5rem auto;
+}
+.sign-up-section .sign-up-container .sign-up-email {
+  width: 70%;
+  margin: 0 auto;
+}
+.sign-up-section .sign-up-container .sign-up-email input {
+  border: 1px solid #070439;
+  padding: 0.4rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  width: 100%;
+  margin: 0.35rem 0;
+}
+.sign-up-section .sign-up-container .sign-up-email button {
+  color: #f6f6fe;
+  text-align: center;
+  background: #3166f6;
+  border: transparent;
+  padding: 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 100%;
+}

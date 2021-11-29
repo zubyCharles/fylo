@@ -179,7 +179,7 @@ header {
       padding: 1rem 0.85rem;
       border-radius: 0.4rem;
       margin: 2.5rem auto;
-      box-shadow: .5px .5px 20px 5px $grey;
+      box-shadow: 0.5px 0.5px 20px 5px $grey;
 
       .testimonial-content {
         padding: 1.25rem 0;
@@ -201,6 +201,60 @@ header {
     }
     .name {
       transform: translate(-5.2rem, -0.25rem);
+    }
+  }
+}
+
+//Sign-up section
+.sign-up-section {
+  background: $pale-blue;
+  color: #fff;
+  padding: 3rem 0;
+
+  .sign-up-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+
+    .sign-up-header {
+      width: fit-content;
+      margin: 0 auto;
+
+    h2 {
+      font-size: 1.25rem;
+    }
+    }
+
+    .sign-up-text {
+      width: 85%;
+      margin: 1.5rem auto;
+    }
+
+    .sign-up-email {
+      width: 70%;
+      margin: 0 auto;
+
+      input {
+        border: 1px solid $dark-blue;
+        padding: 0.4rem 1rem;
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+        width: 100%;
+        margin: 0.35rem 0;
+      }
+      button {
+        color: $lighter-grey;
+        text-align: center;
+        background: $bright-blue;
+        border: transparent;
+        padding: 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        width: 100%;
+      }
     }
   }
 }
