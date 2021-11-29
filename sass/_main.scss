@@ -7,7 +7,7 @@
 }
 
 header {
-    width: 100%;
+  width: 100%;
   .header-container {
     width: 90%;
     display: flex;
@@ -108,11 +108,11 @@ header {
 
 //Illustration-2
 .hero-2 {
-    padding-top: 2.0rem;
-    margin-top: 2.5rem;
-    background: url('images/bg-curve-mobile.svg') no-repeat ;
-    background-size: cover;
-    background-position: 50% 0%;
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+  background: url('images/bg-curve-mobile.svg') no-repeat;
+  background-size: cover;
+  background-position: 50% 0%;
 
   .hero-image-2 {
     width: 90%;
@@ -124,6 +124,7 @@ header {
 //Stay productive section
 
 .productive-section {
+  background: $lighter-grey;
   .productive-container {
     padding: 0.5rem 0;
 
@@ -143,4 +144,63 @@ header {
   }
 }
 
-//Testimonial
+//Testimonial section
+.testimonial-section {
+  .testimonial-container {
+    background: $lighter-grey;
+    width: 100%;
+    padding: 1.25rem 0;
+
+    .testimonial-header {
+      width: 45%;
+      margin: 0.8rem auto;
+      padding: 0.35rem 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.5px solid $cyan;
+
+      p {
+        color: $cyan;
+      }
+      img {
+        width: 12%;
+      }
+    }
+
+    .testimonial-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      color: $dark-blue;
+      background: #fff;
+      width: 80%;
+      padding: 1rem 0.85rem;
+      border-radius: 0.4rem;
+      margin: 2.5rem auto;
+      box-shadow: .5px .5px 20px 5px $grey;
+
+      .testimonial-content {
+        padding: 1.25rem 0;
+        font-size: 0.95rem;
+      }
+      .profile {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        img {
+          width: 25%;
+          height: 80%;
+          border-radius: 100%;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .name {
+      transform: translate(-5.2rem, -0.25rem);
+    }
+  }
+}
