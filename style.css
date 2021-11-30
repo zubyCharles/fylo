@@ -249,23 +249,51 @@ footer {
   background: #070439;
   padding: 2.5rem 2.2rem;
 }
+.footer-container .footer-logo {
+  width: 100%;
+}
 .footer-container .footer-logo img {
   color: #f6f6fe;
-  height: 80%;
-  width: 60%;
+  height: 85%;
+  width: 55%;
 }
 .footer-container .footer-contact div {
   display: flex;
   flex-direction: row;
 }
 .footer-container .footer-contact div img {
-  padding: 0.5rem 1rem 0.5rem 0;
+  padding: 0.5rem 0.8rem 0.5rem 0;
 }
 .footer-container ul {
   list-style: none;
 }
 .footer-container li,
 .footer-container p {
-  font-size: 1.15rem;
-  line-height: 2rem;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+}
+.footer-container .social-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 35%;
+  margin: 0 auto;
+}
+.footer-container .attribution {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.footer-container .attribution div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.footer-container .attribution div p, .footer-container .attribution div a {
+  color: #f6f6fe;
+  font-size: 0.65rem;
+  line-height: normal;
+  padding: 0.08rem;
 }
