@@ -6,6 +6,10 @@
   font-family: Raleway, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.open-sans {
+  font-family: 'Open Sans';
+}
+
 header {
   width: 100%;
   .header-container {
@@ -25,11 +29,18 @@ header {
       width: 50%;
       display: flex;
       justify-content: space-between;
-
+      @include respond-desktop {
+        width: 20%;
+        cursor: pointer;
+      }
       a {
+        font-size: 0.85rem;
         color: $dark-blue;
         &:active {
           color: $cyan;
+        }
+        @include respond-desktop {
+          font-size: 1.2rem;
         }
       }
     }
@@ -38,6 +49,19 @@ header {
 
 /*MAIN SECTION*/
 //Illustration-1
+.text-hero1-grid {
+  @include respond-desktop {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 50% 50%;
+    padding: 3rem;
+  }
+}
+section.hero-1 {
+  @include respond-desktop {
+    transform: translateX(120%);
+  }
+}
 .hero-image-1 {
   padding-top: 2.5rem;
   width: 90%;
@@ -45,6 +69,11 @@ header {
 }
 
 /*Main text section*/
+section.body-text {
+  @include respond-desktop {
+    transform: translateX(-110%);
+  }
+}
 .main-text-container {
   width: 100%;
   padding-top: 2rem;
@@ -80,7 +109,7 @@ header {
 }
 
 .email-section {
-  min-height: 8.5rem;
+  min-height: 7.5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -88,11 +117,22 @@ header {
   width: 80%;
   margin: 0 auto;
 
+  @include respond-desktop {
+    display: flex;
+    flex-direction: row;
+    min-height: 1.5rem;
+  }
+
   input {
     border: 1px solid $dark-blue;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     font-size: 1.2rem;
+
+    @include respond-desktop {
+      font-size: 1rem;
+      padding: 0.4rem 6rem 0.4rem 1.0rem;
+    }
   }
   button {
     color: $lighter-grey;
@@ -103,6 +143,12 @@ header {
     border-radius: 0.25rem;
     font-size: 1.2rem;
     font-weight: 700;
+    box-shadow: 4px 4px 15px $grey;
+
+    @include respond-desktop {
+      font-size: 1rem;
+      padding: 0.4rem 3.5rem ;
+    }
   }
 }
 
@@ -179,11 +225,11 @@ header {
       padding: 1rem 0.85rem;
       border-radius: 0.4rem;
       margin: 2.5rem auto;
-      box-shadow: 0.5px 0.5px 20px 5px $grey;
+      box-shadow: 1.5px 1.5px 10px $grey;
 
       .testimonial-content {
         padding: 0.8rem 0 1.2rem 0;
-        font-size: 0.95rem;
+        font-size: 0.85rem;
       }
       .profile {
         display: flex;
@@ -263,6 +309,9 @@ header {
 //footer
 footer {
   height: 100vh;
+  @include respond-tablet {
+    height: 150vh;
+  }
 }
 .footer-container {
   display: flex;
@@ -299,7 +348,7 @@ footer {
   }
   li,
   p {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     line-height: 2.2rem;
   }
 
@@ -310,6 +359,10 @@ footer {
     justify-content: space-between;
     width: 35%;
     margin: 0 auto;
+
+    i {
+      font-size: 1.75rem;
+    }
   }
 
   .attribution {

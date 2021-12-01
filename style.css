@@ -7,6 +7,10 @@
   font-family: Raleway, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.open-sans {
+  font-family: "Open Sans";
+}
+
 header {
   width: 100%;
 }
@@ -28,14 +32,41 @@ header .header-container .nav-section {
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 750px) {
+  header .header-container .nav-section {
+    width: 20%;
+    cursor: pointer;
+  }
+}
 header .header-container .nav-section a {
+  font-size: 0.85rem;
   color: #070439;
 }
 header .header-container .nav-section a:active {
   color: #3c9f8f;
 }
+@media (min-width: 750px) {
+  header .header-container .nav-section a {
+    font-size: 1.2rem;
+  }
+}
 
 /*MAIN SECTION*/
+@media (min-width: 750px) {
+  .text-hero1-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 50% 50%;
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 750px) {
+  section.hero-1 {
+    transform: translateX(120%);
+  }
+}
+
 .hero-image-1 {
   padding-top: 2.5rem;
   width: 90%;
@@ -43,6 +74,12 @@ header .header-container .nav-section a:active {
 }
 
 /*Main text section*/
+@media (min-width: 750px) {
+  section.body-text {
+    transform: translateX(-110%);
+  }
+}
+
 .main-text-container {
   width: 100%;
   padding-top: 2rem;
@@ -75,7 +112,7 @@ header .header-container .nav-section a:active {
 }
 
 .email-section {
-  min-height: 8.5rem;
+  min-height: 7.5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -83,11 +120,24 @@ header .header-container .nav-section a:active {
   width: 80%;
   margin: 0 auto;
 }
+@media (min-width: 750px) {
+  .email-section {
+    display: flex;
+    flex-direction: row;
+    min-height: 1.5rem;
+  }
+}
 .email-section input {
   border: 1px solid #070439;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   font-size: 1.2rem;
+}
+@media (min-width: 750px) {
+  .email-section input {
+    font-size: 1rem;
+    padding: 0.4rem 6rem 0.4rem 1rem;
+  }
 }
 .email-section button {
   color: #f6f6fe;
@@ -98,6 +148,13 @@ header .header-container .nav-section a:active {
   border-radius: 0.25rem;
   font-size: 1.2rem;
   font-weight: 700;
+  box-shadow: 4px 4px 15px #bfbfbf;
+}
+@media (min-width: 750px) {
+  .email-section button {
+    font-size: 1rem;
+    padding: 0.4rem 3.5rem;
+  }
 }
 
 .hero-2 {
@@ -164,11 +221,11 @@ header .header-container .nav-section a:active {
   padding: 1rem 0.85rem;
   border-radius: 0.4rem;
   margin: 2.5rem auto;
-  box-shadow: 0.5px 0.5px 20px 5px #bfbfbf;
+  box-shadow: 1.5px 1.5px 10px #bfbfbf;
 }
 .testimonial-section .testimonial-container .testimonial-body .testimonial-content {
   padding: 0.8rem 0 1.2rem 0;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 .testimonial-section .testimonial-container .testimonial-body .profile {
   display: flex;
@@ -238,6 +295,11 @@ header .header-container .nav-section a:active {
 footer {
   height: 100vh;
 }
+@media (min-width: 650px) {
+  footer {
+    height: 150vh;
+  }
+}
 
 .footer-container {
   display: flex;
@@ -269,7 +331,7 @@ footer {
 }
 .footer-container li,
 .footer-container p {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   line-height: 2.2rem;
 }
 .footer-container .social-logos {
@@ -278,6 +340,9 @@ footer {
   justify-content: space-between;
   width: 35%;
   margin: 0 auto;
+}
+.footer-container .social-logos i {
+  font-size: 1.75rem;
 }
 .footer-container .attribution {
   width: 100%;
