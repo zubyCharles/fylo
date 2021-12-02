@@ -54,8 +54,9 @@ header .header-container .nav-section a:active {
 /*MAIN SECTION*/
 @media (min-width: 750px) {
   .text-hero1-grid {
+    width: 100%;
     display: grid;
-    gap: 1rem;
+    gap: 4rem;
     grid-template-columns: 50% 50%;
     padding: 3rem;
   }
@@ -63,7 +64,8 @@ header .header-container .nav-section a:active {
 
 @media (min-width: 750px) {
   section.hero-1 {
-    transform: translateX(120%);
+    padding-left: 10rem;
+    transform: translateX(100%);
   }
 }
 
@@ -76,7 +78,7 @@ header .header-container .nav-section a:active {
 /*Main text section*/
 @media (min-width: 750px) {
   section.body-text {
-    transform: translateX(-110%);
+    transform: translateX(-120%);
   }
 }
 
@@ -103,14 +105,18 @@ header .header-container .nav-section a:active {
 .main-text-container .follow-up-text {
   padding: 1.8rem 0;
 }
+@media (min-width: 750px) {
+  .main-text-container .follow-up-text {
+    padding: 0.65rem 0;
+  }
+}
 .main-text-container .follow-up-text p {
   width: fit-content;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.1rem 0;
   color: #070439;
 }
-
 .email-section {
   min-height: 7.5rem;
   display: flex;
@@ -149,11 +155,26 @@ header .header-container .nav-section a:active {
   font-size: 1.2rem;
   font-weight: 700;
   box-shadow: 4px 4px 15px #bfbfbf;
+  transition: all 150ms ease-out 10ms;
 }
 @media (min-width: 750px) {
   .email-section button {
     font-size: 1rem;
     padding: 0.4rem 3.5rem;
+  }
+  .email-section button:hover {
+    cursor: pointer;
+    box-shadow: 8px 8px 15px #bfbfbf;
+  }
+}
+
+@media (min-width: 750px) {
+  .hero2-productive-grid {
+    display: grid;
+    grid-template-columns: 45% 40%;
+    gap: 1%;
+    background: #f6f6fe;
+    background-image: url("images/bg-curve-desktop.svg") no-repeat;
   }
 }
 
@@ -164,10 +185,22 @@ header .header-container .nav-section a:active {
   background-size: cover;
   background-position: 50% 0%;
 }
+@media (min-width: 750px) {
+  .hero-2 {
+    transform: translateX(100%);
+    padding-left: 20rem;
+  }
+}
 .hero-2 .hero-image-2 {
   width: 90%;
   margin: 0 auto;
   padding: 2.5rem 0;
+}
+
+@media (min-width: 750px) {
+  .productive-testimonial {
+    transform: translateX(-110%);
+  }
 }
 
 .productive-section {
@@ -183,17 +216,36 @@ header .header-container .nav-section a:active {
   font-size: 1.2rem;
   color: #070439;
 }
+@media (min-width: 750px) {
+  .productive-section .productive-container h2 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: normal;
+  }
+}
 .productive-section .productive-container .follow-up-text {
   width: 90%;
   margin: 0 auto;
   line-height: 1.5rem;
   color: #585989;
 }
+@media (min-width: 750px) {
+  .productive-section .productive-container .follow-up-text {
+    line-height: normal;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
 
 .testimonial-section .testimonial-container {
   background: #f6f6fe;
   width: 100%;
   padding: 1.25rem 0;
+}
+@media (min-width: 750px) {
+  .testimonial-section .testimonial-container {
+    padding: 0.5rem 0;
+  }
 }
 .testimonial-section .testimonial-container .testimonial-header {
   width: 45%;
@@ -204,6 +256,11 @@ header .header-container .nav-section a:active {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1.5px solid #3c9f8f;
+}
+@media (min-width: 750px) {
+  .testimonial-section .testimonial-container .testimonial-header {
+    margin: 0.2rem 0rem;
+  }
 }
 .testimonial-section .testimonial-container .testimonial-header p {
   color: #3c9f8f;
@@ -220,8 +277,14 @@ header .header-container .nav-section a:active {
   width: 80%;
   padding: 1rem 0.85rem;
   border-radius: 0.4rem;
-  margin: 2.5rem auto;
+  margin: 1.5rem 2rem;
   box-shadow: 1.5px 1.5px 10px #bfbfbf;
+}
+@media (min-width: 750px) {
+  .testimonial-section .testimonial-container .testimonial-body {
+    margin: 1.5rem 0;
+    width: 60%;
+  }
 }
 .testimonial-section .testimonial-container .testimonial-body .testimonial-content {
   padding: 0.8rem 0 1.2rem 0;
@@ -356,7 +419,8 @@ footer {
   display: flex;
   flex-direction: row;
 }
-.footer-container .attribution div p, .footer-container .attribution div a {
+.footer-container .attribution div p,
+.footer-container .attribution div a {
   color: #f6f6fe;
   font-size: 0.65rem;
   line-height: normal;

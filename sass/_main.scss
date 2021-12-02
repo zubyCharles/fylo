@@ -24,6 +24,10 @@ header {
     .site-logo {
       font-size: 0.5rem;
       padding-top: 0.35rem;
+      img {
+        @include respond-desktop {
+        }
+      }
     }
     .nav-section {
       width: 50%;
@@ -51,15 +55,17 @@ header {
 //Illustration-1
 .text-hero1-grid {
   @include respond-desktop {
+    width: 100%;
     display: grid;
-    gap: 1rem;
+    gap: 4rem;
     grid-template-columns: 50% 50%;
     padding: 3rem;
   }
 }
 section.hero-1 {
   @include respond-desktop {
-    transform: translateX(120%);
+    padding-left: 10rem;
+    transform: translateX(100%);
   }
 }
 .hero-image-1 {
@@ -71,7 +77,7 @@ section.hero-1 {
 /*Main text section*/
 section.body-text {
   @include respond-desktop {
-    transform: translateX(-110%);
+    transform: translateX(-120%);
   }
 }
 .main-text-container {
@@ -98,12 +104,17 @@ section.body-text {
   }
   .follow-up-text {
     padding: 1.8rem 0;
+    @include respond-desktop {
+      padding: 0.65rem 0;
+    }
     p {
       width: fit-content;
       margin: 0 auto;
-      font-size: 1rem;
+      font-size: 1.2rem;
       padding: 0.1rem 0;
       color: $dark-blue;
+      @include respond-desktop {
+      }
     }
   }
 }
@@ -131,7 +142,7 @@ section.body-text {
 
     @include respond-desktop {
       font-size: 1rem;
-      padding: 0.4rem 6rem 0.4rem 1.0rem;
+      padding: 0.4rem 6rem 0.4rem 1rem;
     }
   }
   button {
@@ -144,11 +155,26 @@ section.body-text {
     font-size: 1.2rem;
     font-weight: 700;
     box-shadow: 4px 4px 15px $grey;
+    transition: all 150ms ease-out 10ms;
 
     @include respond-desktop {
       font-size: 1rem;
-      padding: 0.4rem 3.5rem ;
+      padding: 0.4rem 3.5rem;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 8px 8px 15px $grey;
+      }
     }
+  }
+}
+
+.hero2-productive-grid {
+  @include respond-desktop {
+    display: grid;
+    grid-template-columns: 45% 40%;
+    gap: 1%;
+    background: $lighter-grey;
+    background-image: url('images/bg-curve-desktop.svg') no-repeat;
   }
 }
 
@@ -159,6 +185,10 @@ section.body-text {
   background: url('images/bg-curve-mobile.svg') no-repeat;
   background-size: cover;
   background-position: 50% 0%;
+  @include respond-desktop {
+    transform: translateX(100%);
+    padding-left: 20rem;
+  }
 
   .hero-image-2 {
     width: 90%;
@@ -168,6 +198,12 @@ section.body-text {
 }
 
 //Stay productive section
+.productive-testimonial {
+  @include respond-desktop {
+    transform: translateX(-110%);
+    //margin-left: 10rem;
+  }
+}
 
 .productive-section {
   background: $lighter-grey;
@@ -180,12 +216,22 @@ section.body-text {
       padding: 1.85rem 0;
       font-size: 1.2rem;
       color: $dark-blue;
+      @include respond-desktop {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: normal;
+      }
     }
     .follow-up-text {
       width: 90%;
       margin: 0 auto;
       line-height: 1.5rem;
       color: $pale-blue;
+      @include respond-desktop {
+        line-height: normal;
+        font-size: 1.2rem;
+        width: 100%;
+      }
     }
   }
 }
@@ -196,6 +242,9 @@ section.body-text {
     background: $lighter-grey;
     width: 100%;
     padding: 1.25rem 0;
+    @include respond-desktop {
+      padding: 0.5rem 0;
+    }
 
     .testimonial-header {
       width: 45%;
@@ -206,6 +255,9 @@ section.body-text {
       justify-content: space-between;
       align-items: center;
       border-bottom: 1.5px solid $cyan;
+      @include respond-desktop {
+        margin: 0.2rem 0rem; 
+      }
 
       p {
         color: $cyan;
@@ -224,8 +276,12 @@ section.body-text {
       width: 80%;
       padding: 1rem 0.85rem;
       border-radius: 0.4rem;
-      margin: 2.5rem auto;
+      margin: 1.5rem 2rem;
       box-shadow: 1.5px 1.5px 10px $grey;
+      @include respond-desktop {
+        margin: 1.5rem 0;
+        width: 60%;
+      }
 
       .testimonial-content {
         padding: 0.8rem 0 1.2rem 0;
@@ -377,7 +433,8 @@ footer {
       display: flex;
       flex-direction: row;
 
-      p,a {
+      p,
+      a {
         color: $lighter-grey;
         font-size: 0.65rem;
         line-height: normal;
