@@ -110,7 +110,7 @@ section.body-text {
     p {
       width: fit-content;
       margin: 0 auto;
-      font-size: 1.2rem;
+      font-size: 1.0rem;
       padding: 0.1rem 0;
       color: $dark-blue;
       @include respond-desktop {
@@ -400,6 +400,9 @@ footer {
   @include respond-tablet {
     height: 150vh;
   }
+  @include respond-desktop {
+    height: fit-content;
+  }
 }
 .footer-container {
   display: flex;
@@ -410,6 +413,26 @@ footer {
   color: $lighter-grey;
   background: $dark-blue;
   padding: 2.5rem 2.2rem;
+  @include respond-desktop {
+  }
+
+  .footer-inner-container {
+    width: 100%;
+    min-height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include respond-desktop {
+      padding: 2rem 0;
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20%;
+      gap: 5%;
+    }
+  }
+
+  .logo-contact div {
+    padding: 0.25rem 0;
+  }
 
   .footer-logo {
     width: 100%;
@@ -417,6 +440,10 @@ footer {
       color: $lighter-grey;
       height: 85%;
       width: 55%;
+      @include respond-desktop {
+        width: 50%;
+        height: 50%;
+      }
     }
   }
 
@@ -427,6 +454,9 @@ footer {
 
       img {
         padding: 0.5rem 0.8rem 0.5rem 0;
+        @include respond-desktop {
+          padding: 0.5rem 1rem 0.5rem 0;
+        }
       }
     }
   }
@@ -438,6 +468,13 @@ footer {
   p {
     font-size: 1.15rem;
     line-height: 2.2rem;
+    width: fit-content;
+    @include respond-desktop {
+      cursor: pointer;
+      &:hover {
+        color: $bright-blue;
+      }
+    }
   }
 
   //social logos
@@ -447,9 +484,19 @@ footer {
     justify-content: space-between;
     width: 35%;
     margin: 0 auto;
-
+    @include respond-desktop {
+      margin-right: 10rem;
+    }
     i {
-      font-size: 1.75rem;
+      @include respond-desktop {
+        padding: 0 0.5rem;
+        &:hover {
+          color: $bright-blue;
+          cursor: pointer;
+          width: fit-content;
+          height: fit-content;
+        }
+      }
     }
   }
 
@@ -459,11 +506,18 @@ footer {
     justify-content: space-around;
     flex-direction: row;
     margin: 0 auto;
+    @include respond-desktop {
+      margin: 0 auto;
+      width: 30%;
+    }
 
     div {
       width: 100%;
       display: flex;
       flex-direction: row;
+      @include respond-desktop {
+        width: 40%;
+      }
 
       p,
       a {
