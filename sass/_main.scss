@@ -138,7 +138,7 @@ section.body-text {
     border: 1px solid $dark-blue;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     @include respond-desktop {
       font-size: 1rem;
@@ -163,6 +163,7 @@ section.body-text {
       &:hover {
         cursor: pointer;
         box-shadow: 8px 8px 15px $grey;
+        background: hsl(215, 90%, 58%);
       }
     }
   }
@@ -170,11 +171,13 @@ section.body-text {
 
 .hero2-productive-grid {
   @include respond-desktop {
+    padding: 0;
+    width: 100%;
+    height: fit-content;
     display: grid;
     grid-template-columns: 45% 40%;
     gap: 1%;
-    background: $lighter-grey;
-    background-image: url('images/bg-curve-desktop.svg') no-repeat;
+    background-color: $lighter-grey;
   }
 }
 
@@ -188,6 +191,8 @@ section.body-text {
   @include respond-desktop {
     transform: translateX(100%);
     padding-left: 20rem;
+    background: none;
+    padding-top: 0;
   }
 
   .hero-image-2 {
@@ -201,7 +206,7 @@ section.body-text {
 .productive-testimonial {
   @include respond-desktop {
     transform: translateX(-110%);
-    //margin-left: 10rem;
+    padding-left: 2.5rem;
   }
 }
 
@@ -247,6 +252,7 @@ section.body-text {
     }
 
     .testimonial-header {
+      cursor: pointer;
       width: 45%;
       margin: 0.8rem auto;
       padding: 0.35rem 0;
@@ -256,11 +262,19 @@ section.body-text {
       align-items: center;
       border-bottom: 1.5px solid $cyan;
       @include respond-desktop {
-        margin: 0.2rem 0rem; 
+        margin: 0.2rem 0rem;
+        width: 35%;
+        &:hover {
+          cursor: pointer;
+          border-bottom: 1.5px solid hsl(150, 100%, 43%);
+        }
       }
 
       p {
         color: $cyan;
+        &:hover {
+          color: hsl(150, 100%, 43%);
+        }
       }
       img {
         width: 12%;
@@ -319,10 +333,19 @@ section.body-text {
     justify-content: space-between;
     height: 100%;
     width: 100%;
+    @include respond-desktop {
+      display: grid;
+      grid-template-columns: 40% 50%;
+      gap: 10%;
+    }
 
     .sign-up-header {
       width: fit-content;
       margin: 0 auto;
+      transform: translateY(-2rem);
+      @include respond-desktop {
+        transform: translate(-8.5rem, -1rem);
+      }
 
       h2 {
         font-size: 1.25rem;
@@ -357,6 +380,15 @@ section.body-text {
         font-size: 0.9rem;
         font-weight: 700;
         width: 100%;
+        @include respond-desktop {
+          transition: all 150ms ease-out 10ms;
+          width: 40%;
+          &:hover {
+            cursor: pointer;
+            box-shadow: 8px 8px 15px $pale-blue;
+            background: hsl(215, 90%, 58%);
+          }
+        }
       }
     }
   }

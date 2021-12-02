@@ -137,7 +137,7 @@ header .header-container .nav-section a:active {
   border: 1px solid #070439;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 @media (min-width: 750px) {
   .email-section input {
@@ -165,16 +165,19 @@ header .header-container .nav-section a:active {
   .email-section button:hover {
     cursor: pointer;
     box-shadow: 8px 8px 15px #bfbfbf;
+    background: #3484f4;
   }
 }
 
 @media (min-width: 750px) {
   .hero2-productive-grid {
+    padding: 0;
+    width: 100%;
+    height: fit-content;
     display: grid;
     grid-template-columns: 45% 40%;
     gap: 1%;
-    background: #f6f6fe;
-    background-image: url("images/bg-curve-desktop.svg") no-repeat;
+    background-color: #f6f6fe;
   }
 }
 
@@ -189,6 +192,8 @@ header .header-container .nav-section a:active {
   .hero-2 {
     transform: translateX(100%);
     padding-left: 20rem;
+    background: none;
+    padding-top: 0;
   }
 }
 .hero-2 .hero-image-2 {
@@ -200,6 +205,7 @@ header .header-container .nav-section a:active {
 @media (min-width: 750px) {
   .productive-testimonial {
     transform: translateX(-110%);
+    padding-left: 2.5rem;
   }
 }
 
@@ -248,6 +254,7 @@ header .header-container .nav-section a:active {
   }
 }
 .testimonial-section .testimonial-container .testimonial-header {
+  cursor: pointer;
   width: 45%;
   margin: 0.8rem auto;
   padding: 0.35rem 0;
@@ -260,10 +267,18 @@ header .header-container .nav-section a:active {
 @media (min-width: 750px) {
   .testimonial-section .testimonial-container .testimonial-header {
     margin: 0.2rem 0rem;
+    width: 35%;
+  }
+  .testimonial-section .testimonial-container .testimonial-header:hover {
+    cursor: pointer;
+    border-bottom: 1.5px solid #00db6e;
   }
 }
 .testimonial-section .testimonial-container .testimonial-header p {
   color: #3c9f8f;
+}
+.testimonial-section .testimonial-container .testimonial-header p:hover {
+  color: #00db6e;
 }
 .testimonial-section .testimonial-container .testimonial-header img {
   width: 12%;
@@ -319,9 +334,22 @@ header .header-container .nav-section a:active {
   height: 100%;
   width: 100%;
 }
+@media (min-width: 750px) {
+  .sign-up-section .sign-up-container {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 10%;
+  }
+}
 .sign-up-section .sign-up-container .sign-up-header {
   width: fit-content;
   margin: 0 auto;
+  transform: translateY(-2rem);
+}
+@media (min-width: 750px) {
+  .sign-up-section .sign-up-container .sign-up-header {
+    transform: translate(-8.5rem, -1rem);
+  }
 }
 .sign-up-section .sign-up-container .sign-up-header h2 {
   font-size: 1.25rem;
@@ -353,6 +381,17 @@ header .header-container .nav-section a:active {
   font-size: 0.9rem;
   font-weight: 700;
   width: 100%;
+}
+@media (min-width: 750px) {
+  .sign-up-section .sign-up-container .sign-up-email button {
+    transition: all 150ms ease-out 10ms;
+    width: 40%;
+  }
+  .sign-up-section .sign-up-container .sign-up-email button:hover {
+    cursor: pointer;
+    box-shadow: 8px 8px 15px #585989;
+    background: #3484f4;
+  }
 }
 
 footer {
