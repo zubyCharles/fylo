@@ -348,7 +348,7 @@ header .header-container .nav-section a:active {
 }
 @media (min-width: 750px) {
   .sign-up-section .sign-up-container .sign-up-header {
-    transform: translate(-8.5rem, -1rem);
+    transform: translate(-7.85rem, -1.5rem);
   }
 }
 .sign-up-section .sign-up-container .sign-up-header h2 {

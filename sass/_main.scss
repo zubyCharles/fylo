@@ -344,7 +344,7 @@ section.body-text {
       margin: 0 auto;
       transform: translateY(-2rem);
       @include respond-desktop {
-        transform: translate(-8.5rem, -1rem);
+        transform: translate(-7.85rem, -1.5rem)
       }
 
       h2 {
