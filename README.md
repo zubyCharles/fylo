@@ -1,3 +1,7 @@
+Live link...
+
+https://cranky-almeida-fe8827.netlify.app/
+
 # Frontend Mentor - Fylo landing page with two column layout
 
 ![Design preview for the Fylo landing page with two column layout challenge](./design/desktop-preview.jpg)
